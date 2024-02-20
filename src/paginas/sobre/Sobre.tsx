@@ -5,6 +5,7 @@ import './Sobre.css';
 function Sobre() {
     return (
         <>
+        <div className='background-sobre'>
        
   
             <div className="flex flex-col gap-7 items-center justify-center py-9">
@@ -35,6 +36,8 @@ function Sobre() {
         
       
             </div>
+          </div>
+
           </div>
        
        

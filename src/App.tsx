@@ -1,22 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import Navbar from './components/navbar/Navbar'
-import './App.css'
 import Footer from './components/footer/Footer'
 import Contato from './paginas/contato/Contato'
 import Sobre from './paginas/sobre/Sobre'
+import Home from './paginas/home/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
 
   return (
     <>
-    <Navbar></Navbar>
-    <Footer></Footer>
-
-      
-      <Contato></Contato>
-      
-      <Sobre></Sobre>
+    <BrowserRouter>
+      <Navbar></Navbar>
+      <div className='min-h-[80vh]'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </div>
+      <Footer></Footer>
+    </BrowserRouter>
     </>
   )
 }
