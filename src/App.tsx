@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Contato from './paginas/contato/Contato'
-
+import Sobre from './paginas/sobre/Sobre'
 function App() {
 
   return (
@@ -15,6 +15,8 @@ function App() {
 
       
       <Contato></Contato>
+      
+      <Sobre></Sobre>
     </>
   )
 }
