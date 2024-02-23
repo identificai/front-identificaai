@@ -20,8 +20,8 @@ function Login() {
 
   useEffect(() => {
     if (usuario.token !== "") {
-        navigate('/home')
-    }
+      navigate('/home')
+  }
 }, [usuario])
 
 function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {

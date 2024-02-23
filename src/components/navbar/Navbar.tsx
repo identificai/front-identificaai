@@ -12,6 +12,7 @@ function Navbar() {
             <Link to="/sobre" className='hover:underline'>Sobre nós</Link>
             <Link to="/contato" className='hover:underline'>Contato</Link>
             <Link to="/cadastro" className='hover:underline'>Cadastro</Link>
+            <Link to="/login" className='hover:underline'>Login</Link>
               
             </div>
           </div>
