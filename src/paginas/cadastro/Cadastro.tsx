@@ -12,18 +12,20 @@ function Cadastro() {
 
   const [usuario, setUsuario] = useState<Usuario>({
     id: 0,
-    nome: '',
-    usuario: '',
-    senha: '',
-    foto: ''
+    nome: "",
+    tipo: "",
+    email: "",
+    senha: "",
+    foto: ""
   })
 
   const [usuarioResposta, setUsuarioResposta] = useState<Usuario>({
     id: 0,
-    nome: '',
-    usuario: '',
-    senha: '',
-    foto: ''
+    nome: "",
+    tipo: "",
+    email: "",
+    senha: "",
+    foto: ""
   })
 
   useEffect(() => {
@@ -86,14 +88,26 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuario</label>
+            <label htmlFor="tipo">Tipo de Usuário</label>
             <input
               type="text"
-              id="usuario"
-              name="usuario"
-              placeholder="Usuario"
+              id="tipo"
+              name="tipo"
+              placeholder="Tipo de Usuario"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.usuario} 
+              value={usuario.tipo} 
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              className="border-2 border-slate-700 rounded p-2"
+              value={usuario.email} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
