@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Contato from './paginas/contato/Contato'
