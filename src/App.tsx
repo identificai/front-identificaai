@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Cadastro from './paginas/cadastro/Cadastro'
 import Login from './paginas/login/Login'
 import { AuthProvider } from './contexts/AuthContext'
+import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
+import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
 function App() {
 
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/home" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro/>} />
+          <Route path="/categorias" element={<ListaCategorias />} />
+          <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
           <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
