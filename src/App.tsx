@@ -10,6 +10,8 @@ import Login from './paginas/login/Login'
 import { AuthProvider } from './contexts/AuthContext'
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
 import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
+import FormularioServicos from './components/servicos/formularioServicos/FormularioServicos';
+import ListaServicos from './components/servicos/listaServicos/ListaServicos';
 function App() {
 
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+          <Route path="/servicos" element={<ListaServicos />} />
+          <Route path="/cadastroServico" element={<FormularioServicos />} />
           <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
