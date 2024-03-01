@@ -12,6 +12,8 @@ import ListaCategorias from './components/categorias/listaCategorias/ListaCatego
 import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
 import FormularioServicos from './components/servicos/formularioServicos/FormularioServicos';
 import ListaServicos from './components/servicos/listaServicos/ListaServicos';
+import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
+import DeletarServicos from './components/servicos/deletarServicos/DeletarServicos';
 function App() {
 
   return (
@@ -31,6 +33,10 @@ function App() {
           <Route path="/servicos" element={<ListaServicos />} />
           <Route path="/cadastroServico" element={<FormularioServicos />} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
+          <Route path="/editarServicos/:id" element={<FormularioServicos/>} />
+          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
         </Routes>
       </div>
       <Footer></Footer>

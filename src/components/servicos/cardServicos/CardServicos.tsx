@@ -17,7 +17,7 @@ function CardProduto({servicos}: CardProdutoProps) {
           <p>{servicos.descricao}</p>
           <p><span className="font-bold">Preço:</span> <span className="font-bold text-green-600">R$ {servicos.preco}</span></p>
           <p>
-           <span className="font-bold">Categoria:</span> {servicos.categoria?.descricao}
+           <span className="font-bold">Categoria:</span> {servicos.categoria?.tipo}
           </p>
         </div>
       </div>

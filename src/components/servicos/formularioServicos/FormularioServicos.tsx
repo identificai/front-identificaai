@@ -138,7 +138,7 @@ function FormularioServicos() {
 
   return (
     <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Serviço'}</h1>
+      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Serviço' : 'Cadastrar Serviço'}</h1>
 
       <form onSubmit={gerarNovoServico} className="flex flex-col w-1/2 gap-4">
         <div className="flex flex-col gap-2">
@@ -182,7 +182,7 @@ function FormularioServicos() {
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)} value={categoria.id}>
             <option value="" disabled>Selecione uma Categoria</option>
             {categorias.map((categoria) => (
-              <option key={categoria.id} value={categoria.id}>{categoria.descricao}</option>
+              <option key={categoria.id} value={categoria.id}>{categoria.tipo}</option>
             ))}
           </select>
         </div>
