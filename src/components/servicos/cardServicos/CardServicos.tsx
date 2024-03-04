@@ -19,6 +19,12 @@ function CardProduto({servicos}: CardProdutoProps) {
           <p>
            <span className="font-bold">Categoria:</span> {servicos.categoria?.tipo}
           </p>
+          <p>
+           <span className="font-bold">Entre em contato:</span> {servicos.usuario?.nome}
+          </p>
+          <p>
+           <span className="font-bold">Email p/ contato:</span> {servicos.usuario?.usuario}
+          </p>
         </div>
       </div>
       <div className="flex">

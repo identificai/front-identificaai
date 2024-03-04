@@ -14,13 +14,15 @@ import FormularioServicos from './components/servicos/formularioServicos/Formula
 import ListaServicos from './components/servicos/listaServicos/ListaServicos';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import DeletarServicos from './components/servicos/deletarServicos/DeletarServicos';
+import { ToastContainer } from 'react-toastify';
 function App() {
 
   return (
     <>
     <AuthProvider>
+    <ToastContainer />
     <BrowserRouter>
-      <Navbar></Navbar>
+      <Navbar/>
       <div className='min-h-[80vh]'>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -40,7 +42,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </BrowserRouter>
     </AuthProvider>
     </>
