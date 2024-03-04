@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Sobre.css';
+import imagemSobre from "../../assets/sobrenos.jpg"
 
 function Sobre() {
     return (
@@ -13,14 +14,14 @@ function Sobre() {
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500">
             <img
               alt="..."
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+              src= {imagemSobre}
               className="w-full align-middle rounded-t-lg"
             />
             <blockquote className="relative p-8 mb-4">
-              <h4 className="text-xl font-bold text-white">
+              <h4 className="text-xl font-bold text-black">
               Sobre nossa organização
               </h4>
-              <p className="text-xl mb-1 font-semibold">
+              <p className="mb-4 text-blueGray-500">
               Nossa visão é criar um mundo onde cada pessoa tenha uma identidade legal reconhecida e respeitada, independentemente de sua origem, status socioeconômico ou local de residência. Queremos ser líderes na prestação de serviços que ajudem a eliminar as barreiras burocráticas e a promover a inclusão e a igualdade de oportunidades para todos.              </p>
             </blockquote>
           </div>
@@ -33,10 +34,9 @@ function Sobre() {
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                     <i className="fas fa-sitemap" />
                   </div>
-                  <h6 className="text-xl mb-1 font-semibold">CSS Components</h6>
+                  <h6 className="text-xl mb-1 font-semibold">Acessibilidade</h6>
                   <p className="mb-4 text-blueGray-500">
-                    Notus JS comes with a huge number of Fully Coded CSS
-                    components.
+                  Buscamos tornar nossos serviços acessíveis a todas as pessoas, garantindo que os custos não sejam uma barreira para obter uma identidade legal.
                   </p>
                 </div>
               </div>
@@ -46,11 +46,10 @@ function Sobre() {
                     <i className="fas fa-drafting-compass" />
                   </div>
                   <h6 className="text-xl mb-1 font-semibold">
-                    JavaScript Components
+                  Inovação
                   </h6>
                   <p className="mb-4 text-blueGray-500">
-                    We also feature many dynamic components for React, NextJS,
-                    Vue and Angular.
+                  Estamos sempre buscando maneiras de melhorar e simplificar nossos processos, utilizando tecnologia e práticas eficientes para oferecer uma experiência superior aos nossos clientes.
                   </p>
                 </div>
               </div>
@@ -61,10 +60,9 @@ function Sobre() {
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                     <i className="fas fa-newspaper" />
                   </div>
-                  <h6 className="text-xl mb-1 font-semibold">Pages</h6>
+                  <h6 className="text-xl mb-1 font-semibold">Qualidade</h6>
                   <p className="mb-4 text-blueGray-500">
-                    This extension also comes with 3 sample pages. They are
-                    fully coded so you can start working instantly.
+                  Comprometemo-nos com a excelência em todos os aspectos de nossos serviços, garantindo a precisão e a confiabilidade de todos os documentos fornecidos.
                   </p>
                 </div>
               </div>
@@ -73,10 +71,9 @@ function Sobre() {
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                     <i className="fas fa-file-alt" />
                   </div>
-                  <h6 className="text-xl mb-1 font-semibold">Documentation</h6>
+                  <h6 className="text-xl mb-1 font-semibold">Integração</h6>
                   <p className="mb-4 text-blueGray-500">
-                    Built by developers for developers. You will love how easy
-                    is to to work with Notus JS.
+                  Atuamos com honestidade e transparência em todas as nossas interações, mantendo os mais altos padrões éticos em nosso trabalho.
                   </p>
                 </div>
               </div>
@@ -86,7 +83,7 @@ function Sobre() {
       </div>
     </div>
   </section>
-        <div className='background-sobre'>
+    {/* /*    <div className='background-sobre'>
        
   
             <div className="flex flex-col gap-7 items-center justify-center py-9">
@@ -119,10 +116,10 @@ function Sobre() {
             </div>
           </div>
 
-          </div>
+    </div>*/}
        
        
-      </>
+      </> 
     );
 }
 
