@@ -17,21 +17,10 @@ function Sobre() {
               className="w-full align-middle rounded-t-lg"
             />
             <blockquote className="relative p-8 mb-4">
-              <svg
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 583 95"
-                className="absolute left-0 w-full block h-95-px -top-94-px"
-              >
-                <polygon
-                  points="-30,95 583,95 583,65"
-                  className="text-pink-500 fill-current"
-                />
-              </svg>
               <h4 className="text-xl font-bold text-white">
               Sobre nossa organização
               </h4>
-              <p className="text-md font-light mt-2 text-white">
+              <p className="text-xl mb-1 font-semibold">
               Nossa visão é criar um mundo onde cada pessoa tenha uma identidade legal reconhecida e respeitada, independentemente de sua origem, status socioeconômico ou local de residência. Queremos ser líderes na prestação de serviços que ajudem a eliminar as barreiras burocráticas e a promover a inclusão e a igualdade de oportunidades para todos.              </p>
             </blockquote>
           </div>
