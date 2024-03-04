@@ -30,13 +30,14 @@ function App() {
           <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+          <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
           <Route path="/servicos" element={<ListaServicos />} />
           <Route path="/cadastroServico" element={<FormularioServicos />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
-          <Route path="/editarServicos/:id" element={<FormularioServicos/>} />
-          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/editarServicos/:id" element={<FormularioServicos />} />
           <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
+
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
       <Footer></Footer>

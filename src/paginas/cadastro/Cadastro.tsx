@@ -14,7 +14,7 @@ function Cadastro() {
     id: 0,
     nome: "",
     tipo: "",
-    email: "",
+    usuario: "",
     senha: "",
     foto: ""
   })
@@ -23,7 +23,7 @@ function Cadastro() {
     id: 0,
     nome: "",
     tipo: "",
-    email: "",
+    usuario: "",
     senha: "",
     foto: ""
   })
@@ -100,14 +100,14 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="usuario">Email</label>
             <input
               type="text"
-              id="email"
-              name="email"
+              id="usuario"
+              name="usuario"
               placeholder="Email"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuario.email} 
+              value={usuario.usuario} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>

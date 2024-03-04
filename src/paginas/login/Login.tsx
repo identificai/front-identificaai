@@ -45,11 +45,11 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             <label htmlFor="email">Email</label>
             <input
               type="text"
-              id="email"
-              name="email"
-              placeholder="Email"
+              id="usuario"
+              name="usuario"
+              placeholder="usuario"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuarioLogin.email} 
+              value={usuarioLogin.usuario} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
