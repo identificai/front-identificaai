@@ -1,14 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
-import Servicos from '../../../models/Servicos';
+import Servico from '../../../models/Servico';
 import { buscar } from '../../../services/Service';
-import CardServicos from '../cardServicos/CardServicos';
+import CardServico from '../cardServicos/CardServicos';
 import { toastAlerta } from '../../../utils/toastAlerta';
 
 function ListaServicos() {
-  const [servicos, setServicos] = useState<Servicos[]>([]);
+  const [servicos, setServicos] = useState<Servico[]>([]);
 
   let navigate = useNavigate();
 
@@ -54,8 +54,8 @@ function ListaServicos() {
         />
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {servicos.map((Servicos) => (
-          <CardServicos key={Servicos.id} post={Servicos} />
+        {servicos.map((servico) => (
+          <CardServico key={servico.id} servicos={servico} />
         ))}
       </div>
     </>
