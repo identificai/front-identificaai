@@ -29,6 +29,7 @@ function FormularioServicos() {
     nome: '',
     descricao: '',
     preco: 0,
+    foto: '',
     categoria: null,
     usuario: null,
   });

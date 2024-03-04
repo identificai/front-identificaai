@@ -3,7 +3,7 @@ import './Contato.css'
 function Contato(){
     return(
 <>
-  <div className="flex min-h-screen items-center justify-start bg-white">
+  <div className="flex min-h-screen items-center justify-start bg-white fundoContato">
     <div className="mx-auto w-full max-w-lg">
       <h1 className="text-4xl font-medium">Nos Contate</h1>
       <p className="mt-3">Envie um email p/ identificaai@gmail.com ou escreva a mensagem aqui:</p>

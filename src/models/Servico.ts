@@ -6,6 +6,7 @@ export default interface Servico{
      nome: string;
      descricao: string;
      preco: number;
+     foto: string;
      categoria: Categoria | null;
      usuario: Usuario | null;
      }

@@ -1,5 +1,5 @@
 import React from 'react';
-import homeLogo from '../../assets/home.png'
+import homeLogo from '../../assets//imagemhome.jpg'
 import './Home.css';
 import ListaServicos from '../../components/servicos/listaServicos/ListaServicos';
 import ModalServicos from '../../components/servicos/modalServicos/ModalServicos';
@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <>
-        <div className='back-home'>
+        <div className='bg-amber-400'>
           <div className='container grid grid-cols-2 text-white'>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
               <h2 className='text-5xl font-bold'>Identifica Aí!</h2>
