@@ -2,44 +2,64 @@ import './Contato.css'
 
 function Contato(){
     return(
-        <>
-        
-    
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold" style={{ textAlign: 'left' }}>
-    <div className="fundoContato hidden lg:block"></div>
-  <form>
-  <h2 className='text-5xl font-bold'>Contato</h2>
-    <label htmlFor="nome">Nome:</label> <br />
-    <input type="text" id="nome" 
-    placeholder="Nome"
-    className="border-2 border-slate-700 rounded p-2"
-    />
-    <br />
-    <label htmlFor="email">E-mail:</label> <br />
-    <input type="text" id="email" 
-    placeholder="Email"
-    className="border-2 border-slate-700 rounded p-2"
-    />
-    <br />
-    <label htmlFor="assunto">Assunto:</label> <br />
-    <textarea
-      name="assunto"
-      id="assunto"
-      placeholder="Assunto"
-      className="border-2 border-slate-700 rounded p-2"
-      cols={40}
-      rows={5}
-      defaultValue={""}
-    />
-    <br />
-    <br />
-    <button className='rounded text-white bg-red-600  hover:bg-red-600  w-1/3 py-2' type='submit'>
-    <span>Enviar</span>
-             </button>
+<>
+  <div className="flex min-h-screen items-center justify-start bg-white fundoContato">
+    <div className="mx-auto w-full max-w-lg">
+      <h1 className="text-4xl font-medium">Nos Contate</h1>
+      <p className="mt-3">Envie um email p/ identificaai@gmail.com ou escreva a mensagem aqui:</p>
+      <form action="https://api.web3forms.com/submit" className="mt-10">
+        <input
+          type="hidden"
+          name="access_key"
+          defaultValue="YOUR_ACCESS_KEY_HERE"
+        />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="relative z-0">
+            <input
+              type="text"
+              name="name"
+              className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "
+            />
+            <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+              Seu nome
+            </label>
+          </div>
+          <div className="relative z-0">
+            <input
+              type="text"
+              name="email"
+              className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "
+            />
+            <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+              Seu email
+            </label>
+          </div>
+          <div className="relative z-0 col-span-2">
+            <textarea
+              name="message"
+              rows={5}
+              className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "
+              defaultValue={""}
+            />
+            <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+              Sua messagem
+            </label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          className="mt-5 rounded-md bg-black px-10 py-2 text-white"
+        >
+          Envie a Messagem
+        </button>
+      </form>
+    </div>
+  </div>
+</>
 
-  </form>
-</div>
-        </>
     );
 
 }
