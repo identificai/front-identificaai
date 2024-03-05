@@ -1,37 +1,45 @@
-import React from 'react';
-import homeLogo from '../../assets//imagemhome.jpg'
-import './Home.css';
-import ListaServicos from '../../components/servicos/listaServicos/ListaServicos';
-import ModalServicos from '../../components/servicos/modalServicos/ModalServicos';
-import { Link } from 'react-router-dom';
-
-
+import React from "react";
+import "./Home.css";
+import ListaServicos from "../../components/servicos/listaServicos/ListaServicos";
+import ModalServicos from "../../components/servicos/modalServicos/ModalServicos";
+import { Link } from "react-router-dom";
+import videobgg from "../../assets/videobgg.mp4";
 
 function Home() {
-    return (
-        <>
-        <div className='bg-amber-400'>
-          <div className='container grid grid-cols-2 text-white'>
-            <div className="flex flex-col gap-4 items-center justify-center py-4">
-              <h2 className='text-5xl font-bold'>Identifica Aí!</h2>
-              <p className='text-xl'>Programa destinado a documentação de todes!</p>
-  
-              <div className="flex justify-around gap-4">
-              <ModalServicos />
-              <Link to="/categorias" className='rounded bg-white text-blue-800 py-2 px-4'>Ver categorias</Link>
-              <Link to="/servicos" className='rounded bg-white text-blue-800 py-2 px-4'>Serviços</Link>
-            </div>
-            </div>
-  
-            <div className="flex justify-center ">
-              <img src={homeLogo} alt="" className='w-2/3' />
-      
-            </div>
+  return (
+    <div className="back-home">
+      <video className="video-background" autoPlay loop muted>
+        <source src={videobgg} type="video/mp4" />
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+      <div className="container grid grid-cols-2 text-white"></div>
+
+      <div className="container grid grid-cols-2 text-white mt-8">
+        <div className="flex flex-col gap-4 items-center justify-center py-4 mt-8">
+          <h2 className="text-5xl font-bold">Identifica Aí!</h2>
+          <p className="text-xl">Programa destinado a documentação de todes!</p>
+          <div className="flex justify-around gap-4">
+            <ModalServicos />
+            <Link
+              to="/categorias"
+              className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
+            >
+              Ver categorias
+            </Link>
+            <Link
+              to="/servicos"
+              className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
+            >
+              Serviços
+            </Link>
           </div>
         </div>
+      </div>
+      <div className="lista-servicos-container grid grid-cols-1 text-white mt-80 mx-4 ">
         <ListaServicos />
-      </>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Home;

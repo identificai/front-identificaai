@@ -1,23 +1,16 @@
-.titulo{
-    color: blue;
-    text-align: center;
+.back-home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.img{
-    width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
 }
-
-.dark-text {
-    color: #778899
-  }
-
-.back-home{
-    background-color: cornflowerblue;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-  }
-  

@@ -9,7 +9,7 @@ interface CardProdutoProps {
 
 function CardProduto({servicos}: CardProdutoProps) {
   return (
-    <div className='relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md'>
+    <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
       <div>
         <img src={servicos.foto || defaultImage} className='rounded-xl'/>
         <div className='content-between'>
