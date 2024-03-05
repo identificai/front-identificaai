@@ -27,11 +27,6 @@ function Footer() {
                 Contato
               </Link>
             </div>
-            <div className="px-5 py-2">
-              <Link to="/terms" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400">
-                Termos
-              </Link>
-            </div>
           </nav>
           <div className="flex justify-center mt-8 space-x-6">
             <a href="mailto:identificai.24@gmail.com" className="text-gray-400 hover:bg-green-700 rounded-full">
