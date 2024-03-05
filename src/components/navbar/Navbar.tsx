@@ -21,15 +21,15 @@ function Navbar() {
                     <li>
                       <Link to="/categorias" className="block md:px-4 transition duration-300 hover:text-teal-400">Categorias</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to="/cadastroCategoria" className="block md:px-4 transition duration-300 hover:text-teal-400">Nova Categoria</Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link to="/servicos" className="block md:px-4 transition duration-300 hover:text-teal-400">Serviços</Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link to="/cadastroServico" className="block md:px-4 transition duration-300 hover:text-teal-400">Novos Serviços</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
                 <div className="w-full space-y-2 border-primary/10 dark:border-gray-700 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l ">
