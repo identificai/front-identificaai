@@ -36,10 +36,10 @@ function Apresentacao({ nome, foto, linkedin, github }: TimeProps) {
     //   </div>
     // </>
     <>
-<div className="aspect-auto w-full bg-gray-50 flex justify-center items-center">
+<div className=" flex flex-col rounded-lg justify-center items-center w-80">
   <div className="h-56 w-72 absolute flex justify-center items-center">
         <img
-          className="w-1/4 m-2 rounded-full"
+          className="w-1/3 sm:w-1/3 m-2 self-start sm:self-center rounded-full"
           src={foto}
           alt=""
         />
@@ -49,10 +49,11 @@ function Apresentacao({ nome, foto, linkedin, github }: TimeProps) {
         h-56
         mx-4
         w-5/6
-        bg-orange-400
+        bg-slate-700
         rounded-3xl
         shadow-md
         sm:w-80 sm:mx-0
+        dark:bg-gray-900/50
       "
       >
         <div className="h-1/2 w-full flex justify-between items-baseline px-3 py-5">
@@ -94,8 +95,8 @@ function Turma() {
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-4 p-8 bg-slate-50/10">
-        <h2 className="text-2xl font-bold"> Nosso Time </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-1 gap-8 2xl:mx-32">
+        <h2 className="mt-20 text-2xl font-bold"> Nosso Time </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8 2xl:mx-32">
           <Apresentacao
             nome="Ana Eliza Oliveira"
             foto="https://avatars.githubusercontent.com/u/151927439?v=4"
