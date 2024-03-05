@@ -31,3 +31,22 @@
     z-index: -1; 
   }
   
+  .button-circle {
+    align-items: end;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    color: gray;
+    border: 2px solid gray;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button-circle:hover {
+    background-color: teal;
+    color: white;
+  }
+  
