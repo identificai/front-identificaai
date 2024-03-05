@@ -20,7 +20,6 @@ function FormularioServicos() {
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
     descricao: '',
-    nome: '',
     tipo: ''
   });
 
