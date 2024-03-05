@@ -6,7 +6,7 @@ import Categoria from '../../../models/Categoria';
 import { buscar } from '../../../services/Service';
 import CardCategorias from '../cardCategorias/CardCategorias';
 import { toastAlerta } from '../../../utils/toastAlerta';
-import videobgg from "../../../assets/videobgg.mp4";
+import videobgg from "../../../assets/bg-brasil.mp4";
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -59,7 +59,7 @@ function ListaCategorias() {
         </video>
         <div className="flex justify-center w-full my-4">
           <div className="container flex flex-col">
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="mt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {categorias.map((categoria) => (
                 <CardCategorias key={categoria.id} categoria={categoria} />
               ))}
