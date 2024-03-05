@@ -7,6 +7,7 @@ interface CardCategoriaProps {
 
 function CardCategorias({categoria}: CardCategoriaProps) {
   return (
+    <div className="container grid grid-cols-2 text-white mt-40">
         <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md md-[-75px]'>
     <div>
       <div className='content-between'>
@@ -20,7 +21,8 @@ function CardCategorias({categoria}: CardCategoriaProps) {
           <span className="font-bold">Descrição da Categoria:</span>
            {categoria.descricao}
         </p>
-    <div className="flex items-end justify-around">
+        <div className="pb-12"></div>
+    <div className="absolute bottom-0 w-full flex items-end justify-around pr-8">
     <Link to={`/editarCategoria/${categoria.id}`} className='w-5/12 text-white bg-green-400 hover:bg-green-800 flex items-center justify-center py-2 rounded-xl'>
         <button>Editar</button>
       </Link>
@@ -30,6 +32,7 @@ function CardCategorias({categoria}: CardCategoriaProps) {
       </div>
       </div>
     </div>
+  </div>
   </div>
   </div>
   )
