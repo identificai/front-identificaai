@@ -6,6 +6,7 @@ import Sobre from './paginas/sobre/Sobre'
 import Home from './paginas/home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Cadastro from './paginas/cadastro/Cadastro'
+import Time from './paginas/time/Time'
 import Login from './paginas/login/Login'
 import { AuthProvider } from './contexts/AuthContext'
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
           <Route path="/servicos" element={<ListaServicos />} />
+          <Route path="/team" element={<Time />} />
           <Route path="/cadastroServico" element={<FormularioServicos />} />
           <Route path="/editarServicos/:id" element={<FormularioServicos />} />
           <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
