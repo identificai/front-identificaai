@@ -1,4 +1,3 @@
-import React from "react";
 import "./Home.css";
 import ModalServicos from "../../components/servicos/modalServicos/ModalServicos";
 import { Link } from "react-router-dom";
