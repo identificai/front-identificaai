@@ -1,5 +1,5 @@
-.background-sobre{
-      background-image: url(../../assets/sobrenos.jpg);
+body{
+      background-image: url(../../assets/sobre.jpg);
       background-repeat: no-repeat;
       width: 100%;
       min-height: 100vh;
