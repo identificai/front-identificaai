@@ -9,6 +9,7 @@ interface CardProdutoProps {
 
 function CardProduto({servicos}: CardProdutoProps) {
   return (
+    <div className="container grid grid-cols-2 text-white mt-40">
     <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
       <div>
         <img src={servicos.foto || defaultImage} className='rounded-xl'/>
@@ -38,7 +39,8 @@ function CardProduto({servicos}: CardProdutoProps) {
            <span className="font-bold">Email p/ contato:</span> {servicos.usuario?.usuario}
           </p>
       </div>
-      <div className="flex items-end justify-around">
+      <div className="pb-12"></div>
+      <div className="absolute bottom-0 w-full flex items-end justify-around">
       <Link to={`/editarServicos/${servicos.id}`} className='w-5/12 text-white bg-green-400 hover:bg-green-800 flex items-center justify-center py-2 rounded-xl'>
           <button>Editar</button>
         </Link>
@@ -49,6 +51,7 @@ function CardProduto({servicos}: CardProdutoProps) {
         </div>
 
       </div>
+    </div>
     </div>
   )
 }
