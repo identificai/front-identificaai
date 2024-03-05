@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <>
-      <section className="bg-white py-16"> 
+      <section className="bg-slate-700 py-16"> 
         <div className="max-w-screen-xl px-4 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"> 
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
-              <Link to="/sobre" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              <Link to="/sobre" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400">
                 Sobre
               </Link>
             </div>
             <div className="px-5 py-2">
-              <Link to="/team" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              <Link to="/team" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400 ">
                 Time
               </Link>
             </div>
             <div className="px-5 py-2">
-              <a href="https://brasil.un.org/pt-br/sdgs/16" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              <a href="https://brasil.un.org/pt-br/sdgs/16" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400">
                 ONU
               </a>
             </div>
             <div className="px-5 py-2">
-              <Link to="/contato" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              <Link to="/contato" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400">
                 Contato
               </Link>
             </div>
             <div className="px-5 py-2">
-              <Link to="/terms" className="text-base leading-6 text-gray-500 hover:text-gray-900">
+              <Link to="/terms" className="text-base leading-6 text-white block md:px-4 transition duration-300 hover:text-teal-400">
                 Termos
               </Link>
             </div>
