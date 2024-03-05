@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import ModalServicos from "../../components/servicos/modalServicos/ModalServicos";
 import { Link } from "react-router-dom";
@@ -6,6 +6,17 @@ import videobgg from "../../assets/videobgg.mp4";
 import ModalCategoria from "../../components/categorias/modalCategorias/ModalCategorias";
 
 function Home() {
+
+  const [numPessoas, setNumPessoas] = useState(20000);
+
+  const adicionarPessoa = () => {
+    setNumPessoas(numPessoas + 1);
+  };
+
+  const formatarNumero = (numero: number) => {
+    return numero.toLocaleString('pt-BR');
+  };
+  
   return (
     <div className="back-home">
       <video className="video-background" autoPlay loop muted>
@@ -18,6 +29,13 @@ function Home() {
         <div className="flex flex-col gap-4 items-center justify-center py-4 mt-8">
           <h2 className="text-5xl font-bold">Identifica Aí!</h2>
           <p className="text-xl">Programa destinado a documentação de todes!</p>
+          <button onClick={adicionarPessoa} className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400">
+            Adicionar 
+          </button>
+          <div className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400">
+  <p className="text-xl">Pessoas beneficiadas: {formatarNumero(numPessoas)}</p>
+</div>
+
           <div className="flex justify-around gap-4">
             <ModalServicos />
             <ModalCategoria />
@@ -36,7 +54,6 @@ function Home() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
