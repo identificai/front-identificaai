@@ -1,4 +1,5 @@
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
+import FotoRafa from '../../assets/rafael.png'
+import FotoSamuca from '../../assets/samuel.png'
 
 interface TimeProps {
   nome: string;
@@ -9,32 +10,6 @@ interface TimeProps {
 
 function Apresentacao({ nome, foto, linkedin, github }: TimeProps) {
   return (
-    // <>
-    //   <div className="border border-orange-400 p-4 flex flex-col rounded-lg items-center bg-orange-100">
-    //     <img
-    //       src={foto}
-    //       //src="https://cdn.playbuzz.com/cdn/913253cd-5a02-4bf2-83e1-18ff2cc7340f/c56157d5-5d8e-4826-89f9-361412275c35.jpg"
-    //       className="w-1/2 rounded-full m-2"
-    //     />
-    //     <p className="text-base font-mono ">{nome}</p>
-    //     <div className="flex gap-10">
-    //       <a
-    //         href={linkedin}
-    //         target="_blank"
-    //         className="hover:bg-blue-300 rounded-full"
-    //       >
-    //         <LinkedinLogo size={32} weight="duotone" />
-    //       </a>
-    //       <a
-    //         href={github}
-    //         target="_blank"
-    //         className="hover:bg-purple-300 rounded-full"
-    //       >
-    //         <GithubLogo size={32} weight="duotone" />
-    //       </a>
-    //     </div>
-    //   </div>
-    // </>
     <>
 <div className=" flex flex-col rounded-lg justify-center items-center w-80">
   <div className="h-56 w-72 absolute flex justify-center items-center">
@@ -94,7 +69,7 @@ function Apresentacao({ nome, foto, linkedin, github }: TimeProps) {
 function Turma() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-4 p-8 bg-slate-50/10">
+      <div className="bg-gray-200 flex flex-col items-center justify-center gap-4 p-8 bg-slate-50/10">
         <h2 className="mt-20 text-2xl font-bold"> Nosso Time </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8 2xl:mx-32">
           <Apresentacao
@@ -117,13 +92,13 @@ function Turma() {
           />
           <Apresentacao
             nome="Rafael Venâncio"
-            foto="https://avatars.githubusercontent.com/u/131331392?v=4"
+            foto={FotoRafa}
             linkedin="https://www.linkedin.com/in/venancio-rafael/"
             github="https://github.com/doncob"
           />
           <Apresentacao
             nome="Samuel Ferreira"
-            foto="https://avatars.githubusercontent.com/u/151537218?v=4"
+            foto={FotoSamuca}
             linkedin="https://www.linkedin.com/in/samuel-ferreira-da-silva/"
             github="https://github.com/samuelferreira25"
           />
