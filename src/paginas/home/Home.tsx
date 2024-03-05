@@ -35,9 +35,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="lista-servicos-container grid grid-cols-1 text-white mt-80 mx-4 ">
-        <ListaServicos />
-      </div>
+      
     </div>
   );
 }
