@@ -7,6 +7,7 @@ import { buscar } from '../../../services/Service';
 import CardServico from '../cardServicos/CardServicos';
 import { toastAlerta } from '../../../utils/toastAlerta';
 import videobgg from "../../../assets/videobgg.mp4";
+import './ListaServicos.css'
 
 function ListaServicos() {
   const [servicos, setServicos] = useState<Servico[]>([]);
@@ -60,7 +61,7 @@ function ListaServicos() {
           <source src={videobgg} type="video/mp4" />
           Seu navegador não suporta vídeos HTML5.
         </video>
-        <div className="flex justify-center w-full my-4">
+        <div className="flex justify-center w-full my-4 container-scroll" style={{ maxHeight: 'calc(100vh - 200px)' }}>
           <div className="container flex flex-col">
             <div className="mt-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {servicos.map((servico) => (
@@ -74,5 +75,6 @@ function ListaServicos() {
 
   );
 }
+
 
 export default ListaServicos;

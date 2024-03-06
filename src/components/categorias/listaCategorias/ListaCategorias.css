@@ -1,0 +1,11 @@
+
+.container-scroll {
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  .container-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
