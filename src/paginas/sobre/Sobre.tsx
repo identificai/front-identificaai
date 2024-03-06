@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Sobre.css';
 import imagemSobre from "../../assets/sobrenos.jpg"
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import FormularioServicos from '../formularioServicos/FormularioServicos';
 
 import 'reactjs-popup/dist/index.css';
