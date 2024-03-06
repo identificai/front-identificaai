@@ -179,6 +179,18 @@ function FormularioServicos() {
           />
         </div>
         <div className="flex flex-col gap-2">
+          <label htmlFor="foto">Foto do serviço</label>
+          <input
+            value={servico.foto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="foto"
+            name="foto"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
           <p>Categoria do Serviço</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione uma categoria</option>

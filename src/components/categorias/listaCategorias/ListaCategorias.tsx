@@ -6,7 +6,7 @@ import Categoria from '../../../models/Categoria';
 import { buscar } from '../../../services/Service';
 import CardCategorias from '../cardCategorias/CardCategorias';
 import { toastAlerta } from '../../../utils/toastAlerta';
-import videobgg from "../../../assets/bg-brasil.mp4";
+import videobgg from "../../../assets/videobgg.mp4";
 
 function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);

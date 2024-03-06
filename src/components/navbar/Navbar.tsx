@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { toastAlerta } from "../../utils/toastAlerta";
+import newLogo from '../../assets/newLogo.png'
 
 function Navbar() {
   let navigate = useNavigate();
@@ -21,10 +22,10 @@ function Navbar() {
         <header className="bg-white dark:bg-gray-900">
           <nav className="absolute z-20 w-full bg-white/60 dark:bg-gray-900/50 backdrop-blur navbar shadow-2xl shadow-gray-600/5 border-b border-gray-100 dark:border-gray-800 peer-checked:navbar-active dark:shadow-none">
             <div className="xl:container m-auto px-6 md:px-12 lg:px-6">
-              <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0 lg:py-5">
+              <div className="flex flex-wrap items-center justify-between gap-6 md:py-1 md:gap-0 lg:py-1">
                 <div className="w-full items-center flex justify-between lg:w-auto">
                   <Link to="/" className="relative z-10 text-sm font-semibold text-blue-600 dark:text-blue-400 lg:text-2xl text-xl uppercase font-bold" aria-label="logo">
-                    ODS
+                  <img src={newLogo} alt="Logo" className="max-w-16 h-auto mr-2" />
                   </Link>
                 </div>
                 <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none dark:shadow-none dark:border-gray-700 lg:border-0 ml-auto">
