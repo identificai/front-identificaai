@@ -2,7 +2,7 @@ import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
 import './Login.css';
 
 import { Link, useNavigate } from 'react-router-dom';
-
+import '../cadastro/Cadastro.css';
 import { AuthContext } from '../../contexts/AuthContext';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
@@ -45,11 +45,11 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             <label htmlFor="email">Email</label>
             <input
               type="text"
-              id="email"
-              name="email"
-              placeholder="Email"
+              id="usuario"
+              name="usuario"
+              placeholder="E-mail"
               className="border-2 border-slate-700 rounded p-2"
-              value={usuarioLogin.email} 
+              value={usuarioLogin.usuario} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>

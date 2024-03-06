@@ -6,6 +6,7 @@ import Sobre from './paginas/sobre/Sobre'
 import Home from './paginas/home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Cadastro from './paginas/cadastro/Cadastro'
+import Time from './paginas/time/Time'
 import Login from './paginas/login/Login'
 import { AuthProvider } from './contexts/AuthContext'
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias';
@@ -14,13 +15,15 @@ import FormularioServicos from './components/servicos/formularioServicos/Formula
 import ListaServicos from './components/servicos/listaServicos/ListaServicos';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import DeletarServicos from './components/servicos/deletarServicos/DeletarServicos';
+import { ToastContainer } from 'react-toastify';
 function App() {
 
   return (
     <>
     <AuthProvider>
+    <ToastContainer />
     <BrowserRouter>
-      <Navbar></Navbar>
+      <Navbar/>
       <div className='min-h-[80vh]'>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -30,16 +33,18 @@ function App() {
           <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
-          <Route path="/servicos" element={<ListaServicos />} />
-          <Route path="/cadastroServico" element={<FormularioServicos />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/editarCategoria/:id" element={<FormularioCategoria/>} />
-          <Route path="/editarServicos/:id" element={<FormularioServicos/>} />
+          <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
           <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/servicos" element={<ListaServicos />} />
+          <Route path="/team" element={<Time />} />
+          <Route path="/cadastroServico" element={<FormularioServicos />} />
+          <Route path="/editarServicos/:id" element={<FormularioServicos />} />
           <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
+
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </BrowserRouter>
     </AuthProvider>
     </>
