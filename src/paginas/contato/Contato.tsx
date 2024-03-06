@@ -1,10 +1,10 @@
-import './Contato.css'
+//import './Contato.css'
 
 function Contato(){
     return(
 <>
-  <div className="flex min-h-screen items-center justify-start bg-white fundoContato">
-    <div className="mx-auto w-full max-w-lg">
+  <div className="flex min-h-screen items-center justify-start ">
+    <div className="mx-auto w-full h-full max-w-lg border rounded border-gray-200 bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 bg-gray-200">
       <h1 className="text-4xl font-medium">Nos Contate</h1>
       <p className="mt-3">Envie um email p/ identificaai@gmail.com ou escreva a mensagem aqui:</p>
       <form action="https://api.web3forms.com/submit" className="mt-10">

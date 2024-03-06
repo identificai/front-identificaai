@@ -76,18 +76,18 @@ function Cadastro() {
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div className="fundoCadastro hidden lg:block"></div>
         <form
-          className="flex justify-center items-center flex-col w-2/3 gap-3"
+          className="flex flex-col pb-6 text-center rounded-3xl"
           onSubmit={cadastrarNovoUsuario}
         >
           <h2 className="text-slate-900 text-5xl">Cadastrar</h2>
           <div className="flex flex-col w-full">
-            <label htmlFor="nome">Nome</label>
+            <label htmlFor="nome" className="mb-2 text-sm text-start text-grey-900">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -95,11 +95,11 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="tipo">Tipo de Usuário</label>
+            <label htmlFor="tipo" className="mb-2 text-sm text-start text-grey-900">Tipo de Usuário</label>
             <select
               id="tipo"
               name="tipo"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={usuario.tipo} 
               onChange={(e: ChangeEvent<HTMLSelectElement>) => atualizarEstado(e)}>
               <option value="">Selecione o tipo de usuário</option>
@@ -108,13 +108,13 @@ function Cadastro() {
             </select>
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Email</label>
+            <label htmlFor="usuario" className="mb-2 text-sm text-start text-grey-900">Email</label>
             <input
               type="text"
               id="usuario"
               name="usuario"
               placeholder="Email"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={usuario.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -122,13 +122,13 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="foto">Foto</label>
+            <label htmlFor="foto" className="mb-2 text-sm text-start text-grey-900">Foto</label>
             <input
               type="text"
               id="foto"
               name="foto"
               placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -136,13 +136,13 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha" className="mb-2 text-sm text-start text-grey-900">Senha</label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 atualizarEstado(e)
@@ -150,13 +150,13 @@ function Cadastro() {
             />
           </div>
           <div className="flex flex-col w-full">
-            <label htmlFor="confirmarSenha">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha" className="mb-2 text-sm text-start text-grey-900">Confirmar Senha</label>
             <input
               type="password"
               id="confirmarSenha"
               name="confirmarSenha"
               placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="flex items-center w-full px-5 py-1 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-grey-200 text-dark-grey-900 rounded-2xl"
               value={confirmaSenha}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 handleConfirmarSenha(e)
@@ -165,13 +165,13 @@ function Cadastro() {
           </div>
           <div className="flex justify-around w-full gap-8">
             <button
-              className="rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2"
+              className='text-white bg-red-400 hover:bg-red-700 w-5/12 flex items-center justify-center py-2 rounded-xl'
               onClick={back}
             >
               Cancelar
             </button>
             <button
-              className="rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2"
+              className='w-5/12 text-white bg-green-400 hover:bg-green-800 flex items-center justify-center py-2 rounded-xl'
               type="submit"
             >
               Cadastrar
