@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { toastAlerta } from "../../utils/toastAlerta";
-import newLogo from '../../assets/newLogo.png'
+import newLogo from '../../assets/iden.png'
 
 function Navbar() {
   let navigate = useNavigate();
@@ -16,48 +16,92 @@ function Navbar() {
 
   let navbarComponent;
 
-  if (usuario && usuario.token !== "") {
+  if (usuario && usuario.token !== "" ) {
     navbarComponent = (
-      <>
-        <header className="bg-white dark:bg-gray-900">
-          <nav className="absolute z-20 w-full bg-white/60 dark:bg-gray-900/50 backdrop-blur navbar shadow-2xl shadow-gray-600/5 border-b border-gray-100 dark:border-gray-800 peer-checked:navbar-active dark:shadow-none">
-            <div className="xl:container m-auto px-6 md:px-12 lg:px-6">
-              <div className="flex flex-wrap items-center justify-between gap-6 md:py-1 md:gap-0 lg:py-1">
-                <div className="w-full items-center flex justify-between lg:w-auto">
-                  <Link to="/" className="relative z-10 text-sm font-semibold text-blue-600 dark:text-blue-400 lg:text-2xl text-xl uppercase font-bold" aria-label="logo">
-                  <img src={newLogo} alt="Logo" className="max-w-16 h-auto mr-2" />
-                  </Link>
-                </div>
-                <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none dark:shadow-none dark:border-gray-700 lg:border-0 ml-auto">
-                  <div className="text-gray-600 dark:text-gray-300 lg:pr-4">
-                    <ul className="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
-                      <li>
-                        <Link to="/home" className="block md:px-4 transition duration-300 hover:text-teal-400">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/categorias" className="block md:px-4 transition duration-300 hover:text-teal-400">Categorias</Link>
-                      </li>
-                      <li>
-                        <Link to="/servicos" className="block md:px-4 transition duration-300 hover:text-teal-400">Serviços</Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="w-full space-y-2 border-primary/10 dark:border-gray-700 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l ">
-                    <button
-                      onClick={logout}
-                      className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-sky-600 dark:before:bg-sky-400 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 ms-8 ..."
-                    >
-                      <span className="relative text-sm font-semibold text-white dark:text-gray-900 ">
-                        Logout
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </header>
-      </>
+<>
+<div
+  className="flex flex-col items-center justify-center mt-32"
+  x-cloak=""
+  x-data="appData()"
+  x-init="appInit()"
+>
+  <div className="flex flex-col">
+    {/* Page Scroll Progress */}
+    <div
+      className="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+      bg-blue-500"
+    />
+    {/* Navbar */}
+    <nav
+      className="flex justify-around py-4 bg-white/80
+      backdrop-blur-md shadow-md w-full
+      fixed top-0 left-0 right-0 z-10"
+    >
+      {/* Logo Container */}
+      <div className="flex items-center">
+        {/* Logo */}
+        <a className="cursor-pointer">
+          <h3 className="text-2xl font-medium text-cyan-700 hover:text-cyan-500">
+            <img
+              className="h-20 object-cover"
+              src={newLogo}
+              alt="Store Logo"
+            />
+          </h3>
+        </a>
+      </div>
+      {/* Links Section */}
+      <div className="items-center hidden space-x-8 lg:flex">
+        <a
+          className="flex text-cyan-700 hover:text-cyan-500
+              cursor-pointer transition-colors duration-300  text-2xl font-semibold"
+        >
+          Sobre Nós
+        </a>
+      </div>
+      {/* Icon Menu Section */}
+      <div className="flex items-center space-x-5">
+        {/* Register */}
+        <a
+          className="flex text-cyan-700 hover:text-cyan-500
+              cursor-pointer transition-colors duration-300"
+        >
+          <svg
+            className="fill-current h-10 w-10 mr-2 mt-0.5"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
+          </svg>
+        </a>
+        {/* Login */}
+        {/* <a
+          className="flex text-gray-600 
+              cursor-pointer transition-colors duration-300
+              font-semibold text-blue-600"
+        >
+          <svg
+            className="fill-current h-5 w-5 mr-2 mt-0.5"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
+          </svg>
+          Login
+        </a> */}
+      </div>
+    </nav>
+  </div>
+</div>
+</>
     );
   } else {
     navbarComponent = (
