@@ -46,7 +46,7 @@ function Introducao() {
                 </li>
               </p>
               <p className="mt-4 text-gray-600">
-                <h2>Comece Agora:</h2>
+                <h2><strong>Comece Agora:</strong></h2>
                 Não deixe para depois! Comece sua jornada em direção à
                 identidade legal hoje mesmo. Registre-se em nosso site para
                 acessar todos os recursos disponíveis e dar o primeiro passo
