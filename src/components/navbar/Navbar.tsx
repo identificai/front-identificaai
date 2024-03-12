@@ -37,14 +37,14 @@ function Navbar() {
           <div className="flex flex-col">
             {/* Page Scroll Progress */}
             <div
-              className="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+              className="fixed inset-x-0 top-0 z-20 h-0.5 mt-0.5
       bg-blue-500"
             />
             {/* Navbar */}
             <nav
               className="flex justify-around py-4 bg-white/80
       backdrop-blur-md shadow-md w-full
-      fixed top-0 left-0 right-0 z-10"
+      fixed top-0 left-0 right-0 z-20"
             >
               {/* Logo Container */}
               <div className="flex items-center">
@@ -96,7 +96,7 @@ function Navbar() {
                 {usuario.token !== "" ? (
                   <div
                     id="dropdownDivider"
-                    className={`z-10 ${
+                    className={`z-20 ${
                       userDropdown ? "" : "hidden"
                     } bg-white divide-y divide-gray-100 rounded-b-md shadow w-full md:w-60 absolute top-28 right-8 `}
                   >
@@ -151,7 +151,7 @@ function Navbar() {
                 ) : (
                   <div
                     id="dropdownDivider"
-                    className={`z-10 ${
+                    className={`z-20 ${
                       userDropdown ? "" : "hidden"
                     } bg-white divide-y divide-gray-100 rounded-b-md shadow w-full md:w-60 absolute top-14 right-0 md:-right-24`}
                   >
@@ -209,14 +209,14 @@ function Navbar() {
         <div className="flex flex-col">
           {/* Page Scroll Progress */}
           <div
-            className="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5
+            className="fixed inset-x-0 top-0 z-20 h-0.5 mt-0.5
     bg-blue-500"
           />
           {/* Navbar */}
           <nav
             className="flex justify-around py-4 bg-white/80
     backdrop-blur-md shadow-md w-full
-    fixed top-0 left-0 right-0 z-10"
+    fixed top-0 left-0 right-0 z-20"
           >
             {/* Logo Container */}
             <div className="flex items-center">
@@ -268,7 +268,7 @@ function Navbar() {
               {usuario.token !== "" ? (
                 <div
                   id="dropdownDivider"
-                  className={`z-10 ${
+                  className={`z-20 ${
                     userDropdown ? "" : "hidden"
                   } bg-white divide-y divide-gray-100 rounded-b-md shadow w-full md:w-60 absolute top-28 right-8 `}
                 >
@@ -323,7 +323,7 @@ function Navbar() {
               ) : (
                 <div
                   id="dropdownDivider"
-                  className={`z-10 ${
+                  className={`z-20 ${
                     userDropdown ? "" : "hidden"
                   } bg-white divide-y divide-gray-100 rounded-b-md shadow w-full md:w-60 absolute top-28 right-8`}
                 >

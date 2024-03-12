@@ -1,9 +1,7 @@
 body{
-      background-color: linear-gradient(to right, #f59e0b , #713f12);
-      background-repeat: no-repeat;
+      background-color: #713f12 ;
       width: 100%;
       min-height: 100vh;
-      background-size: cover;
       background-position: center;
 }
 
