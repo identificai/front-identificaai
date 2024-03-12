@@ -1,5 +1,5 @@
 body{
-      background-image: url(../../assets/sobre.jpg);
+      background-color: linear-gradient(to right, #f59e0b , #713f12);
       background-repeat: no-repeat;
       width: 100%;
       min-height: 100vh;
