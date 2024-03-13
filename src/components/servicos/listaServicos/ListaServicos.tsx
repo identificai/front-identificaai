@@ -6,7 +6,6 @@ import Servico from '../../../models/Servico';
 import { buscar } from '../../../services/Service';
 import CardServico from '../cardServicos/CardServicos';
 import { toastAlerta } from '../../../utils/toastAlerta';
-import videobgg from "../../../assets/videobgg.mp4";
 import './ListaServicos.css'
 
 function ListaServicos() {
@@ -56,11 +55,6 @@ function ListaServicos() {
         />
       )}
       
-      <div className="back-home">
-        <video className="video-background" autoPlay loop muted>
-          <source src={videobgg} type="video/mp4" />
-          Seu navegador não suporta vídeos HTML5.
-        </video>
         <div className="flex justify-center w-full my-4 container-scroll" style={{ maxHeight: 'calc(100vh - 200px)' }}>
           <div className="container flex flex-col">
             <div className="mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,7 +64,7 @@ function ListaServicos() {
             </div>
           </div>
           </div>
-      </div>
+     
     </>
 
   );
