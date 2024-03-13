@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Servicos from '../../../models/Servico'
 import defaultImage from '../../../assets/books.jpg'
-import { WhatsappLogo } from "@phosphor-icons/react";
 
 interface CardServicoProps {
   servicos: Servicos
@@ -39,19 +38,14 @@ function CardServicos({servicos}: CardServicoProps) {
            <span className="font-bold">Email p/ contato:</span> {servicos.usuario?.usuario}
           </p>
       </div>
- 
-           <span className="font-bold">Agende:</span> 
-         
       <div className="pb-12"></div>
       <div className="absolute bottom-0 w-full flex items-end justify-around ">
-      <Link to={`/editarServicos/${servicos.id}`} >
-          {/* <button>Editar</button> */}
-          <a href="#" className="text-green-500 hover:bg-green-700 rounded-full">
-              <WhatsappLogo size={32} weight="duotone" />             </a>
+      <Link to={`/editarServicos/${servicos.id}`} className='w-5/12 text-white bg-green-400 hover:bg-green-800 flex items-center justify-center py-2 rounded-xl'>
+          <button>Editar</button>
         </Link>
-        {/* <Link to={`/deletarServicos/${servicos.id}`} className='text-white bg-red-400 hover:bg-red-700 w-5/12 flex items-center justify-center py-2 rounded-xl'>
+        <Link to={`/deletarServicos/${servicos.id}`} className='text-white bg-red-400 hover:bg-red-700 w-5/12 flex items-center justify-center py-2 rounded-xl'>
           <button>Deletar</button>
-        </Link> */}
+        </Link>
         </div>
         </div>
 

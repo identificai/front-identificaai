@@ -139,12 +139,13 @@ function FormularioServicos() {
 
   return (
     <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Insira seus dados' : 'Cadastrar '}</h1>
+      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Serviço' : 'Cadastrar Serviço'}</h1>
 
       <form onSubmit={gerarNovoServico} className="flex flex-col w-1/2 gap-4">
         <div className="flex flex-col gap-2">
-          <label htmlFor="nome">Nome do requerinte</label>
+          <label htmlFor="nome">Nome do Serviço</label>
           <input
+            value={servico.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
             placeholder="Nome"
@@ -154,8 +155,9 @@ function FormularioServicos() {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Endereço</label>
+          <label htmlFor="descricao">Descrição do Serviço</label>
           <input
+            value={servico.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
             placeholder="Descrição"
@@ -168,34 +170,27 @@ function FormularioServicos() {
           <label htmlFor="preco">Preço do serviço</label>
           <input
             value={servico.preco}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="number"
+            placeholder="Preço"
             name="preco"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="foto">Foto 3x4</label>
+          <label htmlFor="foto">Foto do serviço</label>
           <input
+            value={servico.foto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
-            placeholder="Foto"
+            placeholder="foto"
             name="foto"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="data">Data do agendamento:</label>
-          <input
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="dd/mm/aa"
-            className="border-2 border-slate-700 rounded p-2"
-          />
-        </div>
-       
-        {/* <div className="flex flex-col gap-2">
           <p>Categoria do Serviço</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione uma categoria</option>
@@ -205,7 +200,7 @@ function FormularioServicos() {
               </>
             ))}
           </select>
-        </div> */}
+        </div>
         <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
           {carregandoCategoria ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
