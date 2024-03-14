@@ -51,6 +51,12 @@ function Home() {
             >
               Serviços
             </Link>
+            <Link
+              to="/agendamentos"
+              className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
+            >
+              Agendamentos
+            </Link>
           </div>
         </div>
       </div>

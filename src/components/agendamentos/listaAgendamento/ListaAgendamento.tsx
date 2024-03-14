@@ -2,14 +2,15 @@ import { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
-import Servico from '../../../models/Servico';
+import Agendamento from '../../../models/Agendamento';
 import { buscar } from '../../../services/Service';
-import CardServico from '../cardServicos/CardServicos';
+import CardAgendamento from '../cardAgendamento/CardAgendamento';
 import { toastAlerta } from '../../../utils/toastAlerta';
-import './ListaServicos.css'
+import './ListaAgendamento.css';
+import CardAgendamentos from '../cardAgendamento/CardAgendamento';
 
-function ListaServicos() {
-  const [servicos, setServicos] = useState<Servico[]>([]);
+function ListaAgendamentos() {
+  const [agendamentos, setAgendamentos] = useState<Agendamento[]>([]);
 
   let navigate = useNavigate();
 
@@ -23,28 +24,28 @@ function ListaServicos() {
     }
   }, [token]);
 
-  async function buscarServicos() {
+  async function buscarAgendamentos() {
     try {
-      await buscar('/servicos', setServicos, {
+      await buscar('/agendamentos', setAgendamentos, {
         headers: {
           Authorization: token,
         },
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        toastAlerta('O token expirou, favor logar novamente', 'info')
-        handleLogout()
+        toastAlerta('O token expirou, favor logar novamente', 'info');
+        handleLogout();
       }
     }
   }
 
   useEffect(() => {
-    buscarServicos();
-  }, [servicos.length]);
+    buscarAgendamentos();
+  }, [agendamentos.length]);
 
   return (
     <>
-      {servicos.length === 0 && (
+      {agendamentos.length === 0 && (
         <Dna
           visible={true}
           height="200"
@@ -54,21 +55,18 @@ function ListaServicos() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      
-        <div className="flex justify-center w-full my-4 container-scroll" style={{ maxHeight: 'calc(100vh - 200px)' }}>
-          <div className="container flex flex-col">
-            <div className="mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {servicos.map((servico) => (
-                < CardServico key={servico.id} servicos={servico} />
-              ))}
-            </div>
-          </div>
-          </div>
-     
-    </>
 
+      <div className="flex justify-center w-full my-4 container-scroll" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+        <div className="container flex flex-col">
+          <div className="mt-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {agendamentos.map((agendamento) => (
+              <CardAgendamento key={agendamento.id} agendamento={agendamento} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
-
-export default ListaServicos;
+export default ListaAgendamentos;
