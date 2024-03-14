@@ -16,6 +16,10 @@ import ListaServicos from './components/servicos/listaServicos/ListaServicos';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import DeletarServicos from './components/servicos/deletarServicos/DeletarServicos';
 import { ToastContainer } from 'react-toastify';
+import FormularioAgendamentos from './components/agendamentos/formularioAgendamento/FormularioAgendamento';
+import ListaAgendamento from './components/agendamentos/listaAgendamento/ListaAgendamento';
+import DeletarAgendamento from './components/agendamentos/deletarAgendamento/DeletarAgendamento';
+import EditarAgendamentos from './components/agendamentos/editarAgendamentos/EditarAgendamentos';
 function App() {
 
   return (
@@ -40,6 +44,10 @@ function App() {
           <Route path="/cadastroServico" element={<FormularioServicos />} />
           <Route path="/editarServicos/:id" element={<FormularioServicos />} />
           <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
+          <Route path="/cadastroAgendamento" element={<FormularioAgendamentos />} />
+          <Route path="/editarAgendamento/:id" element={<EditarAgendamentos />} />
+          <Route path="/deletarAgendamento/:id" element={<DeletarAgendamento />} />
+          <Route path="/agendamentos" element={<ListaAgendamento />} />
 
           <Route path="/login" element={<Login/>} />
         </Routes>

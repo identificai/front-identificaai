@@ -1,3 +1,4 @@
+import Servico from "./Servico";
 import Usuario from "./Usuario";
 
 export default interface Agendamento{
@@ -5,5 +6,6 @@ export default interface Agendamento{
      nome: string;
      dataAgendamento: Date;
      usuario: Usuario | null;
+     servico: Servico | null;
      }
      
