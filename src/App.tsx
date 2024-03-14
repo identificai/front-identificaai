@@ -26,7 +26,7 @@ function App() {
       <Navbar/>
       <div className='min-h-[80vh]'>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Sobre />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/home" element={<Home />} />
