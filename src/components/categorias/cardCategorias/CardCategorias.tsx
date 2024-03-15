@@ -8,7 +8,7 @@ interface CardCategoriaProps {
 function CardCategorias({categoria}: CardCategoriaProps) {
   return (
     <div className="container grid grid-cols-2 text-white mt-40">
-        <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md md-[-75px]'>
+        <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 bg-clip-border text-gray-700 shadow-md md-[-75px]'>
     <div>
       <div className='content-between'>
       <div className='p-4 '>
