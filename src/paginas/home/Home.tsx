@@ -18,7 +18,7 @@ function Home() {
   };
   
   return (
-    <div className="back-home">
+    <div className="fundo-Home">
       {/* <video className="video-background" autoPlay loop muted>
         <source src={videobgg} type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
