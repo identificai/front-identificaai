@@ -50,7 +50,7 @@ function Navbar() {
               {/* Logo Container */}
               <div className="flex items-center">
                 {/* Logo */}
-                <a className="cursor-pointer">
+                <Link to={"/home"} className="cursor-pointer">
                   <h3 className="text-2xl font-medium text-cyan-700 hover:text-cyan-500">
                     <img
                       className="h-20 object-cover"
@@ -58,16 +58,25 @@ function Navbar() {
                       alt="Store Logo"
                     />
                   </h3>
-                </a>
+                </Link>
               </div>
               {/* Links Section */}
               <div className="items-center hidden space-x-8 lg:flex">
-                <a
+              {usuario.tipo !== "Consumidor"?
+                <Link to={"/servicos"} 
                   className="flex text-cyan-700 hover:text-cyan-500
               cursor-pointer transition-colors duration-300  text-2xl font-semibold"
                 >
-                  Sobre Nós
-                </a>
+                  Serviços
+                </Link>
+                :
+                <Link to={"/servicos"} 
+                className="flex text-cyan-700 hover:text-cyan-500
+            cursor-pointer transition-colors duration-300  text-2xl font-semibold"
+              >
+               Meus Serviços
+              </Link>
+                }
               </div>
               {/* Icon Menu Section
         {/* Register */}
