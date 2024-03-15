@@ -47,7 +47,6 @@ function ListaAgendamentos() {
   }
   
   
-  
 
   return (
     <>
