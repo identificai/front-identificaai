@@ -21,7 +21,7 @@ function Navbar() {
   function logout() {
     handleLogout();
     toastAlerta("Usuário deslogado com sucesso", "");
-    navigate("/login");
+    navigate("/sobre");
   }
 
   let navbarComponent;
@@ -152,7 +152,7 @@ function Navbar() {
                     <div className="py-2">
                       <button
                         className="w-full text-left block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700"
-                        onClick={handleLogout}
+                        onClick={logout}
                       >
                         Sair
                       </button>
