@@ -6,3 +6,15 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.bg-component{
+    background-color: #ffd55a;
+}
+.cor-texto-padrao{
+    color: #082f49;
+}
+.cor-acessorio{
+    background-color: #6dd47e;
+}
+
+
+
