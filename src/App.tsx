@@ -20,6 +20,7 @@ import FormularioAgendamentos from './components/agendamentos/formularioAgendame
 import ListaAgendamento from './components/agendamentos/listaAgendamento/ListaAgendamento';
 import DeletarAgendamento from './components/agendamentos/deletarAgendamento/DeletarAgendamento';
 import EditarAgendamentos from './components/agendamentos/editarAgendamentos/EditarAgendamentos';
+import ListaAgendamentosUsuario from './components/agendamentos/listaAgendamento/ListaAgendamentosUsuario';
 function App() {
 
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/editarAgendamento/:id" element={<EditarAgendamentos />} />
           <Route path="/deletarAgendamento/:id" element={<DeletarAgendamento />} />
           <Route path="/agendamentos" element={<ListaAgendamento />} />
+          <Route path="/agendamentos/:id" element={<ListaAgendamentosUsuario />} />
 
           <Route path="/login" element={<Login/>} />
         </Routes>
