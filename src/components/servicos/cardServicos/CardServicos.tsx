@@ -16,7 +16,7 @@ function CardServicos({ servicos }: CardServicoProps) {
   
   return (
     <div className="container grid grid-cols-2 text-white mt-40">
-      <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
+      <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300  bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
         <div>
           <img src={servicos.foto || defaultImage} className='rounded-xl max-h-52 w-full'/>
           <div className='content-between'>

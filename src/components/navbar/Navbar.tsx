@@ -5,6 +5,8 @@ import { toastAlerta } from "../../utils/toastAlerta";
 import newLogo from "../../assets/iden.png";
 import useClickOutside from "../../eventListener/useClickOutside";
 import Login from "../../paginas/login/Login";
+import ModalCategoria from "../categorias/modalCategorias/ModalCategorias";
+import ModalServico from "../servicos/modalServicos/ModalServicos";
 
 function Navbar() {
   let navigate = useNavigate();
@@ -78,6 +80,10 @@ function Navbar() {
               </Link>
                 }
               </div>
+              
+
+              {/* <ModalCategoria/>
+              <ModalServico/> */}
               {/* Icon Menu Section
         {/* Register */}
               <li
