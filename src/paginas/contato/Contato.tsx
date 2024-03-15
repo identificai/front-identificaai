@@ -3,11 +3,15 @@
 function Contato(){
     return(
 <>
-  <div className="flex min-h-screen items-center justify-start ">
-    <div className="mx-auto w-full h-full max-w-lg border rounded border-gray-200 bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 bg-gray-200">
-      <h1 className="text-4xl font-medium">Nos Contate</h1>
-      <p className="mt-3">Envie um email p/ identificaai@gmail.com ou escreva a mensagem aqui:</p>
+  {/* component */}
+  {/* Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  */}
+  <div className="flex min-h-screen items-center justify-start bg-white">
+    <div className="mx-auto w-full max-w-lg">
+      <h1 className="text-4xl font-medium">Entre em contato</h1>
+      <p className="mt-3">Email para identificaai@gmail.com ou deixe uma mensagem aqui:</p>
       <form action="https://api.web3forms.com/submit" className="mt-10">
+        {/* This is a working contact form. 
+   Get your free access key from: https://web3forms.com/  */}
         <input
           type="hidden"
           name="access_key"
@@ -53,7 +57,7 @@ function Contato(){
           type="submit"
           className="mt-5 rounded-md bg-black px-10 py-2 text-white"
         >
-          Envie a Mensagem 
+          Envie a Mensagem
         </button>
       </form>
     </div>
