@@ -29,16 +29,11 @@ function Home() {
         <div className="flex flex-col gap-4 items-center justify-center py-4 mt-8">
           <h2 className="text-5xl font-bold">Identifica Aí!</h2>
           <p className="text-xl">Programa destinado a documentação de todes!</p>
-          <button onClick={adicionarPessoa} className="rounded bg-white text-black-600 dark:text-black-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400">
-            Adicionar 
-          </button>
-          <div className="rounded bg-white text-black-600 dark:text-black-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400">
-  <p className="text-xl">Pessoas beneficiadas: {formatarNumero(numPessoas)}</p>
-</div>
+        
 
           <div className="flex justify-around gap-4">
-            <ModalServicos />
-            <ModalCategoria />
+            {/* <ModalServicos />
+            <ModalCategoria /> */}
             <Link
               to="/categorias"
               className="rounded bg-white text-black-600 dark:text-black-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
@@ -53,7 +48,7 @@ function Home() {
             </Link>
             <Link
               to="/agendamentos"
-              className="rounded bg-white text-gray-600 dark:text-gray-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
+              className="rounded bg-white text-black-600 dark:text-black-300 bg-opacity-60 py-2 px-4 block md:px-4 transition duration-300 hover:text-teal-400"
             >
               Agendamentos
             </Link>
