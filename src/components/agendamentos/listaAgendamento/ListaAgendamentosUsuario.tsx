@@ -10,22 +10,30 @@ import './ListaAgendamento.css';
 
 function ListaAgendamentos() {
   const [agendamentos, setAgendamentos] = useState<Agendamento[]>([]);
-
-  let navigate = useNavigate();
-
+  const [userId, setUserId] = useState<number | null>(null); // Alterado para number | null
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
+  let navigate = useNavigate();
+
   useEffect(() => {
-    if (token === '') {
+    if (!token) {
       toastAlerta('Você precisa estar logado', 'info');
       navigate('/');
+    } else {
+      setUserId(usuario.id);
     }
   }, [token]);
 
-  async function buscarAgendamentos() {
+  useEffect(() => {
+    if (userId !== null) {
+      buscarAgendamentosUsuario();
+    }
+  }, [userId]);
+
+  async function buscarAgendamentosUsuario() {
     try {
-      await buscar('/agendamentos', setAgendamentos, {
+      await buscar(`/agendamentos/usuario`, setAgendamentos, {
         headers: {
           Authorization: token,
         },
@@ -37,10 +45,9 @@ function ListaAgendamentos() {
       }
     }
   }
-
-  useEffect(() => {
-    buscarAgendamentos();
-  }, [agendamentos.length]);
+  
+  
+  
 
   return (
     <>
@@ -69,3 +76,4 @@ function ListaAgendamentos() {
 }
 
 export default ListaAgendamentos;
+

@@ -67,7 +67,7 @@ function Navbar() {
                   className="flex text-cyan-700 hover:text-cyan-500
               cursor-pointer transition-colors duration-300  text-2xl font-semibold"
                 >
-                  Serviços
+                  Serviços  
                 </Link>
                 :
                 <Link to={"/servicos"} 
@@ -134,7 +134,7 @@ function Navbar() {
                       </li>
                       <li>
                         <Link
-                          to={"/conta"}
+                          to={`/agendamentos/${usuario.id}`}
                           className="block px-4 py-2 hover:bg-gray-100"
                         >
                           Serviços Agendados
