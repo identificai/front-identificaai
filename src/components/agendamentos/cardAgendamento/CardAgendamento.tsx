@@ -11,7 +11,7 @@ interface CardAgendamentosProps {
 function CardAgendamentos({ agendamento}: CardAgendamentosProps) { 
   return (
     <div className="container grid grid-cols-2 text-white mt-40">
-      <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 hover:text-teal-400 bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
+      <div className='relative flex w-96 flex-col rounded-xl bg-white bg-opacity-50 transition duration-300 bg-clip-border text-gray-700 shadow-md mt-[-75px]'>
         <div>
           <p className="block text-lg font-bold text-center uppercase leading-relaxed text-blue-gray-900 antialiased">
             Nome do requerente: {agendamento.nome}
