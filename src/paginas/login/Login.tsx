@@ -42,7 +42,7 @@ function Login() {
         <div className="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
           <div className="self-start hidden lg:flex flex-col  text-slate-700">
             <img src="" className="mb-3" />
-            <h1 className="mb-3 font-bold text-5xl ">Seja bem vindo ao Identifica aí </h1>
+            <h1 className="mb-3 font-bold text-5xl ">Seja Bem Vindo Ao Identifica Aí </h1>
             <p className="pr-3">
             </p>
           </div>
@@ -91,27 +91,6 @@ function Login() {
                     atualizarEstado(e)
                   }
                 />
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <input
-                    id="remember_me"
-                    name="remember_me"
-                    type="checkbox"
-                    className="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded"
-                  />
-                  <label
-                    htmlFor="remember_me"
-                    className="ml-2 block text-sm text-gray-800"
-                  >
-                    Remember me
-                  </label>
-                </div>
-                <div className="text-sm">
-                  <a href="#" className="text-green-400 hover:text-green-500">
-                    Forgot your password?
-                  </a>
-                </div>
               </div>
               <div className="flex justify-center">
                 <button
