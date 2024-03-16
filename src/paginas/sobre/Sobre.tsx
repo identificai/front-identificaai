@@ -1,8 +1,29 @@
 import "./Sobre.css";
 import imagemSobre from "../../assets/sobrenos.jpg";
 import Introducao from "../../components/introducao/Introducao";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import UsuarioLogin from "../../models/UsuarioLogin";
+import { AuthContext } from "../../contexts/AuthContext";
+import { toastAlerta } from "../../utils/toastAlerta";
 
 function Sobre() {
+  let navigate = useNavigate();
+
+  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
+    {} as UsuarioLogin
+  );
+
+  const { usuario, handleLogin } = useContext(AuthContext);
+
+  const { isLoading } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (usuario.token !== "") {
+      toastAlerta('Usuário logado com sucesso', 'sucesso')
+      navigate("/home");
+    }
+  }, [usuario]);
   return (
     <>
       <Introducao />
