@@ -20,7 +20,7 @@ function Sobre() {
 
   useEffect(() => {
     if (usuario.token !== "") {
-      toastAlerta('Usuário deslogado com sucesso', 'sucesso')
+      toastAlerta('Usuário logado com sucesso', 'sucesso')
       navigate("/home");
     }
   }, [usuario]);

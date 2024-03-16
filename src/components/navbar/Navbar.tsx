@@ -62,21 +62,23 @@ function Navbar() {
               </div>
               {/* Links Section */}
               <div className="items-center hidden space-x-8 lg:flex">
-              {usuario.tipo == "Consumidor"?
-                <Link to={"/servicos"} 
-                  className="flex text-cyan-700 hover:text-cyan-500
+                {usuario.tipo == "Consumidor" ? (
+                  <Link
+                    to={"/servicos"}
+                    className="flex text-cyan-700 hover:text-cyan-500
               cursor-pointer transition-colors duration-300  text-2xl font-semibold"
-                >
-                  Serviços
-                </Link>
-                :
-                <Link to={"/servicos"} 
-                className="flex text-cyan-700 hover:text-cyan-500
+                  >
+                    Serviços
+                  </Link>
+                ) : (
+                  <Link
+                    to={"/servicos"}
+                    className="flex text-cyan-700 hover:text-cyan-500
             cursor-pointer transition-colors duration-300  text-2xl font-semibold"
-              >
-               Meus Serviços
-              </Link>
-                }
+                  >
+                    Meus Serviços
+                  </Link>
+                )}
               </div>
               {/* Icon Menu Section
         {/* Register */}
@@ -183,7 +185,12 @@ function Navbar() {
                       aria-labelledby="dropdownDividerButton"
                     >
                       <li>
-                        <Login></Login>
+                        <Link
+                          to={"/login"}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Login
+                        </Link>
                       </li>
                       <li>
                         <Link
@@ -292,7 +299,12 @@ function Navbar() {
                     aria-labelledby="dropdownDividerButton"
                   >
                     <li>
-                      <Login></Login>
+                      <Link
+                        to={"/login"}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Login
+                      </Link>
                     </li>
                     <li>
                       <Link
