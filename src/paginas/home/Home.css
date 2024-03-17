@@ -11,16 +11,24 @@
 }
 
 .fundo-Home {
-  margin-top: 0;
-  padding: 0;
   background-image: url('../../assets/fundoHome.jpg');
-  background-size: cover; 
-  background-position: center;
-  position: relative;
+  background-size:cover; 
     width: 100%;
-    height: 100vh;
     overflow: hidden;
-} 
+}
+.fundo-Categoria{
+  background-image: url('../../assets/categoriasImg.jpg');
+  background-size:cover; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.fundo-Agendamento{
+  background-image: url('../../assets/agendamentos.jpg');
+  background-size:cover; 
+    width: 100%;
+    overflow: hidden;
+}
 
 .dark-text {
     color: #778899

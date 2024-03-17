@@ -38,16 +38,12 @@ function CardServicos({ servicos }: CardServicoProps) {
                 {servicos.categoria?.tipo}
               </p>
               <p>
-                <span className="font-bold">Entre em contato:</span>
-                {servicos.usuario?.nome}
-              </p>
-              <p>
                 <span className="font-bold">Email p/ contato:</span> {servicos.usuario?.usuario}
               </p>
             </div>
             <div className="pb-12"></div>
             <div className="absolute bottom-0 w-full flex items-end justify-around ">
-              <button onClick={handleAgendarClick} className='w-5/12 text-white bg-green-400 hover:bg-green-800 flex items-center justify-center py-2 rounded-xl'>
+              <button onClick={handleAgendarClick} className='flex w-auto items-center my-4 text-white text-sm uppercase font-medium rounded  bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500'>
                 Agende um horário
               </button>
             </div>

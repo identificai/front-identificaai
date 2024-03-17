@@ -64,7 +64,7 @@ function Navbar() {
               </div>
               {/* Links Section */}
               <div className="items-center hidden space-x-8 lg:flex">
-                {usuario.tipo == "Consumidor" ? (
+                {usuario.tipo !== "Consumidor" ? (
                   <Link
                     to={"/servicos"}
                     className="flex text-cyan-700 hover:text-cyan-500
