@@ -29,7 +29,7 @@ function Sobre() {
       <Introducao />
       <section className="relative pt-16 bg-blueGray-50">
         <div className="container mx-auto">
-        <h2 className="text-2xl text-gray-900 font-bold md:text-4xl text-center">
+        <h2 className="text-2xl text-gray-900 font-bold md:text-4xl text-center mb-8">
               Nossos Valores
             </h2>
           <div className="flex flex-wrap items-center">    

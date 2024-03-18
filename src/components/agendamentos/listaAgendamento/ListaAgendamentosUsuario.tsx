@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { Dna, RotatingLines } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Agendamento from '../../../models/Agendamento';
@@ -51,14 +51,16 @@ function ListaAgendamentos() {
   return (
     <>
       {agendamentos.length === 0 && (
-        <Dna
+        <div className="flex justify-center">
+        <RotatingLines
           visible={true}
-          height="200"
+          strokeColor="black"
+          strokeWidth="5"
+          animationDuration="0.75"
           width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+          ariaLabel="loading"
         />
+        </div>
       )}
 
       <div className="flex justify-center w-full my-4 container-scroll" style={{ maxHeight: 'calc(100vh - 200px)' }}>

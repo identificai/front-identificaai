@@ -1,36 +1,36 @@
-import { Link } from 'react-router-dom'
-import Categoria from '../../../models/Categoria'
+import { Link } from "react-router-dom";
+import Categoria from "../../../models/Categoria";
 
 interface CardCategoriaProps {
-  categoria: Categoria
+  categoria: Categoria;
 }
 
-function CardCategorias({categoria}: CardCategoriaProps) {
+function CardCategorias({ categoria }: CardCategoriaProps) {
   return (
-<>
-  {/* START Card component */}
-  <article className="text-xl tcontainer bg-white shadow-2xl rounded-2xl p-5">
-    <h1 className="font-bold text-cyan-700">{categoria?.tipo}</h1>
-    <p className="my-4 font-light text-gray-500 hover:font-bold">
-    {categoria.descricao}
-    </p>
-    <div className="space-x-4">
-    <Link to={`/editarCategoria/${categoria.id}`} 
+    <>
+      <article className="text-xl tcontainer bg-white shadow-2xl rounded-2xl p-5">
+        <h1 className="font-bold text-cyan-700">{categoria?.tipo}</h1>
+        <p className="my-4 font-light text-gray-500 hover:font-bold">
+          {categoria.descricao}
+        </p>
+        <div className="space-x-4">
+          <Link
+            to={`/editarCategoria/${categoria.id}`}
             className="my-4 rounded-lg py-2 px-4 text-center text-white  bg-cyan-700  hover:bg-cyan-500"
-    >
-      Editar
-    </Link>
+          >
+            Editar
+          </Link>
 
-    <Link to={`/editarCategoria/${categoria.id}`} 
+          <Link
+            to={`/deletarCategoria/${categoria.id}`}
             className="my-4 rounded-lg py-2 px-4 text-center text-white  bg-gray-700  hover:bg-gray-500"
-    >
-      Deletar
-    </Link>
-    </div>
-  </article>
-  {/* END Card component */}
-</>
-  )
+          >
+            Deletar
+          </Link>
+        </div>
+      </article>
+    </>
+  );
 }
 
-export default CardCategorias
+export default CardCategorias;
