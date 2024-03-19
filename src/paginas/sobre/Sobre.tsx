@@ -18,27 +18,18 @@ function Sobre() {
 
   const { isLoading } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (usuario.token !== "") {
-      toastAlerta('Usuário logado com sucesso', 'sucesso')
-      navigate("/home");
-    }
-  }, [usuario]);
   return (
     <>
       <Introducao />
-      <section className="relative pt-16 bg-blueGray-50">
+      <section className="relative pt-2 bg-blueGray-50">
         <div className="container mx-auto">
-        <h2 className="text-2xl text-gray-900 font-bold md:text-4xl text-center mb-8">
-              Nossos Valores
-            </h2>
-          <div className="flex flex-wrap items-center">    
+          <div className="flex flex-wrap items-center">
             <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500">
                 <img
                   alt="..."
                   src={imagemSobre}
-                  className="w-full align-middle rounded-t-lg"
+                  className="w-full align-middle rounded-t-lg max-h-96"
                 />
                 <blockquote className="relative p-8 mb-4">
                   <h4 className="text-xl font-bold text-black">
@@ -56,11 +47,14 @@ function Sobre() {
               </div>
             </div>
             <div className="w-full md:w-6/12 px-4">
+              <h2 className="text-2xl text-gray-900 font-bold md:text-4xl text-center mb-8">
+                Nossos Valores
+              </h2>
               <div className="flex flex-wrap">
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col mt-4">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-4 h-4 mb-5 shadow-lg rounded-full bg-cyan-700">
                         <i className="fas fa-sitemap" />
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">
@@ -75,7 +69,7 @@ function Sobre() {
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-4 h-4 mb-5 shadow-lg rounded-full bg-cyan-700">
                         <i className="fas fa-drafting-compass" />
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">Inovação</h6>
@@ -91,7 +85,7 @@ function Sobre() {
                 <div className="w-full md:w-6/12 px-4">
                   <div className="relative flex flex-col min-w-0 mt-4">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-4 h-4 mb-5 shadow-lg rounded-full bg-cyan-700">
                         <i className="fas fa-newspaper" />
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">Qualidade</h6>
@@ -104,7 +98,7 @@ function Sobre() {
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
-                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
+                      <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-4 h-4 mb-5 shadow-lg rounded-full bg-cyan-700">
                         <i className="fas fa-file-alt" />
                       </div>
                       <h6 className="text-xl mb-1 font-semibold">Integração</h6>

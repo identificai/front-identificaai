@@ -25,14 +25,14 @@ function Home() {
             <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
               <div className="px-10 max-w-xl">
                 <h2 className="text-2xl text-white font-semibold">
-                  Nossos Servicos
+                  Nossos Serviços
                 </h2>
                 <p className="mt-2 text-gray-200">
-                  Algum texto de apresentacao dos servicos
+                  Temos serviços gratuitos e pagos
                 </p>
                 <Link to="/servicos">
                   <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
-                    <span>Servicos</span>
+                    <span>Serviços</span>
                     <svg
                       className="h-5 w-5 mx-2"
                       fill="none"
@@ -57,7 +57,7 @@ function Home() {
                     Categorias
                   </h2>
                   <p className="mt-2 text-gray-200">
-                    Texto para descrever categorias
+                    Nossas categorias são: profissional, trânsito, identidade, posse de propriedade e criminal
                   </p>
                   <Link to="/categorias">
                     <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
@@ -90,7 +90,7 @@ function Home() {
                   <h2 className="text-2xl text-black font-semibold">
                     Agendamentos
                   </h2>
-                  <p className="mt-2 text-gray-700">Texto de agendamentos</p>
+                  <p className="mt-2 text-gray-700">Evite longas filas e reduza o tempo de espera agendando seu horário diretamente pelo nosso site.</p>
                   <Link to="/agendamentos">
                     <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
                       <span>Agendamentos</span>
@@ -113,7 +113,7 @@ function Home() {
           </div>
           <div className="mt-16">
             <h3 className="text-gray-600 text-2xl font-medium">
-              Principais Servicos
+              Principais Serviços
             </h3>
             <ListaServicosHome />
           </div>
