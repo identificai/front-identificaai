@@ -5,7 +5,7 @@ interface CardAgendamentosProps {
   agendamento: Agendamento;
 }
 
-function formatarData(dataString: string) {
+function formatarData(dataString: Date) {
   const data = new Date(dataString);
   return data.toLocaleDateString("pt-BR");
 }
