@@ -1,0 +1,6 @@
+.fundo-faca {
+    background-image: url('../../assets/facaparte.jpg');
+    background-size:cover; 
+      width: 100%;
+      overflow: hidden;
+  }
