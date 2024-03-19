@@ -16,6 +16,11 @@ import ListaServicos from './components/servicos/listaServicos/ListaServicos';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import DeletarServicos from './components/servicos/deletarServicos/DeletarServicos';
 import { ToastContainer } from 'react-toastify';
+import FormularioAgendamentos from './components/agendamentos/formularioAgendamento/FormularioAgendamento';
+import ListaAgendamento from './components/agendamentos/listaAgendamento/ListaAgendamento';
+import DeletarAgendamento from './components/agendamentos/deletarAgendamento/DeletarAgendamento';
+import EditarAgendamentos from './components/agendamentos/editarAgendamentos/EditarAgendamentos';
+import ListaAgendamentosUsuario from './components/agendamentos/listaAgendamento/ListaAgendamentosUsuario';
 function App() {
 
   return (
@@ -26,7 +31,7 @@ function App() {
       <Navbar/>
       <div className='min-h-[80vh]'>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Sobre />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/home" element={<Home />} />
@@ -40,6 +45,11 @@ function App() {
           <Route path="/cadastroServico" element={<FormularioServicos />} />
           <Route path="/editarServicos/:id" element={<FormularioServicos />} />
           <Route path="/deletarServicos/:id" element={<DeletarServicos />} />
+          <Route path="/cadastroAgendamento" element={<FormularioAgendamentos />} />
+          <Route path="/editarAgendamento/:id" element={<EditarAgendamentos />} />
+          <Route path="/deletarAgendamento/:id" element={<DeletarAgendamento />} />
+          <Route path="/agendamentos" element={<ListaAgendamento />} />
+          <Route path="/agendamentos/:id" element={<ListaAgendamentosUsuario />} />
 
           <Route path="/login" element={<Login/>} />
         </Routes>
