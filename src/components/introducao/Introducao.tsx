@@ -50,7 +50,7 @@ function Introducao() {
                 Não deixe para depois! Comece sua jornada em direção à
                 identidade legal hoje mesmo. Registre-se em nosso site para
                 acessar todos os recursos disponíveis e dar o primeiro passo
-                para garantir seus direitos e oportunidades..
+                para garantir seus direitos e oportunidades.
               </p>
             </div>
           </div>

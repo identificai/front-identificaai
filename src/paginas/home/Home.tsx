@@ -28,7 +28,7 @@ function Home() {
                   Oferecemos diversos serviços com <br /> preços acessíveis,
                   além de serviços <br />
                   gratuitos para fornecer documentação
-                  <br /> atualizada para todes.
+                  <br /> atualizada para todos.
                 </p>
                 <Link to="/servicos">
                   <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
