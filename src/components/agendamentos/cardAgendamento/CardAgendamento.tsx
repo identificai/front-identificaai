@@ -1,9 +1,13 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Agendamento from "../../../models/Agendamento";
 
 interface CardAgendamentosProps {
   agendamento: Agendamento;
+}
+
+function formatarData(dataString: string) {
+  const data = new Date(dataString);
+  return data.toLocaleDateString("pt-BR");
 }
 
 function CardAgendamentos({ agendamento }: CardAgendamentosProps) {
@@ -13,16 +17,30 @@ function CardAgendamentos({ agendamento }: CardAgendamentosProps) {
         Nome do requerente: {agendamento.nome}
       </h1>
       <p className="my-4 font-light text-gray-500 hover:font-bold">
-      <span className="text-gray-700 hover:text-gray-900">Serviço contratado:</span> {agendamento.servico?.nome}
+        <span className="text-gray-700 hover:text-gray-900">
+          Serviço contratado:
+        </span>{" "}
+        {agendamento.servico?.nome}
       </p>
       <p className="my-4 font-light text-gray-500 hover:font-bold">
-      <span className="text-gray-700 hover:text-gray-900">R$:</span> {agendamento.servico?.preco}
+        <span className="text-gray-700 hover:text-gray-900">R$:</span>{" "}
+        {agendamento.servico?.preco}
       </p>
       <p className="my-4 font-light text-gray-500 hover:font-bold">
-      <span className="text-gray-700 hover:text-gray-900">Descrição do Serviço:</span> {agendamento.servico?.descricao}
+        <span className="text-gray-700 hover:text-gray-900">
+          Descrição do Serviço:
+        </span>{" "}
+        {agendamento.servico?.descricao}
       </p>
       <p className="my-4 font-light text-gray-500 hover:font-bold">
-      <span className="text-gray-700 hover:text-gray-900">Email do requerente:</span> {agendamento.usuario?.usuario}
+        <span className="text-gray-700 hover:text-gray-900">
+          Email do requerente:
+        </span>{" "}
+        {agendamento.usuario?.usuario}
+      </p>
+      <p className="my-4 font-light text-gray-500 hover:font-bold">
+        <span className="text-gray-700 hover:text-gray-900">Data:</span>
+        {formatarData(agendamento.dataAgendamento)}
       </p>
       <div className="space-x-4">
         <Link

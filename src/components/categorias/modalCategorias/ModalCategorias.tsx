@@ -1,8 +1,6 @@
 import FormularioCategorias from '../formularioCategoria/FormularioCategoria';
-
 import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';
-
 import './ModalCategorias.css'
 
 function ModalCategoria() {

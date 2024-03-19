@@ -1,8 +1,6 @@
 import FormularioServicos from '../formularioServicos/FormularioServicos';
-
 import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';
-
 import './ModalServicos.css'
 
 function ModalServico() {

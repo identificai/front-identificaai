@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
-import ModalServicos from "../../components/servicos/modalServicos/ModalServicos";
 import { Link } from "react-router-dom";
-import ImgHome from "../../assets/imagemhome.jpg";
-import ModalCategoria from "../../components/categorias/modalCategorias/ModalCategorias";
 import ListaServicosHome from "../../components/servicos/listaServicos/ListaServicosHome";
 
 function Home() {
@@ -28,7 +25,10 @@ function Home() {
                   Nossos Serviços
                 </h2>
                 <p className="mt-2 text-gray-200">
-                  Temos serviços gratuitos e pagos
+                  Oferecemos diversos serviços com <br /> preços acessíveis,
+                  além de serviços <br />
+                  gratuitos para fornecer documentação
+                  <br /> atualizada para todes.
                 </p>
                 <Link to="/servicos">
                   <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
@@ -57,7 +57,9 @@ function Home() {
                     Categorias
                   </h2>
                   <p className="mt-2 text-gray-200">
-                    Nossas categorias são: profissional, trânsito, identidade, posse de propriedade e criminal
+                    As categorias podem representar diversos tipos de documento
+                    de propriedade ou certificação legal para exercício de
+                    ofícios.
                   </p>
                   <Link to="/categorias">
                     <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
@@ -78,19 +80,15 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div
-              className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2"
-              style={{
-                backgroundImage:
-                  'url("https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")',
-              }}
-            >
+            <div className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2">
               <div className="bg-gray-900 bg-opacity-50 flex items-center h-full fundo-Agendamento">
                 <div className="px-10 max-w-xl">
                   <h2 className="text-2xl text-black font-semibold">
                     Agendamentos
                   </h2>
-                  <p className="mt-2 text-gray-700">Evite longas filas e reduza o tempo de espera agendando seu horário diretamente pelo nosso site.</p>
+                  <p className="mt-2 text-gray-700">
+                    Verifique seus <br /> agendamentos
+                  </p>
                   <Link to="/agendamentos">
                     <button className="flex w-auto items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none bg-cyan-700  hover:bg-cyan-500 text-gray-100 p-3  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
                       <span>Agendamentos</span>

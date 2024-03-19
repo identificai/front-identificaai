@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Dna, RotatingLines } from "react-loader-spinner";
+import { RotatingLines } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Servico from "../../../models/Servico";
